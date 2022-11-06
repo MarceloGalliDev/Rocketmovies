@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import backgroundImg from "../../assets/background.png"
+import backgroundImg from "../../assets/background.png";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
     height: 100vh;
@@ -12,7 +13,7 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     text-align: center;
 
     > h1 {
@@ -29,9 +30,19 @@ export const Form = styled.form`
         font-size: 14px;
         color: ${({ theme }) => theme.COLORS.GRAY_100};
     }
+`;
 
+export const BackLogin = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 42px;
+    gap: 8px;
+    color: ${({ theme }) => theme.COLORS.ORANGE};
+    
     > a {
-        margin-top: 100px;
         color: ${({ theme }) => theme.COLORS.ORANGE};
     }
 `;

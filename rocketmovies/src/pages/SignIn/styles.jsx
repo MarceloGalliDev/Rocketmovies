@@ -13,7 +13,7 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     text-align: center;
 
     > h1 {
@@ -23,7 +23,7 @@ export const Form = styled.form`
 
     > h2 {
         font-size: 24px;
-        margin-top: 48px;
+        margin: 48px 0;
     }
 
     > p {

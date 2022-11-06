@@ -1,6 +1,6 @@
-import { Container, Form, Background } from "./styles";
+import { Container, Form, Background, BackLogin } from "./styles";
 import { Input } from "../../components/Input";
-import { FiLogIn, FiMail, FiLock, FiUser } from "react-icons/fi"
+import { FiLogIn, FiMail, FiLock, FiUser, FiArrowLeft } from "react-icons/fi"
 import { Button } from "../../components/Button"
 import { Link } from "react-router-dom";
 
@@ -8,10 +8,9 @@ import { Link } from "react-router-dom";
 export function SignUp() {
     return (
         <Container>
-            <Background />
             <Form>
-                <h1>Rocket Notes</h1>
-                <p>Aplicação para salvar e gerenciar seus links úteis</p>
+                <h1>Rocket Movies</h1>
+                <p>Aplicação para acompanhar tudo que assistir</p>
                 <h2>Crie sua conta</h2>
 
                 <Input
@@ -34,9 +33,13 @@ export function SignUp() {
 
                 <Button title="Cadastrar" />
 
-                <Link to="/">Voltar para o login</Link>
+                <BackLogin>
+                    <FiArrowLeft size={24}/>
+                    <Link to="/">Voltar para o login</Link>
+                </BackLogin>
 
             </Form>
+            <Background />
         </Container>
     )
 }
