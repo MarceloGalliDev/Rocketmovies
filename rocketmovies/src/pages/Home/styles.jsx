@@ -4,23 +4,36 @@ import { Link } from "react-router-dom";
 export const Container = styled.div`
     width: 100%;
     height: 100vh;
-
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 `;
 
 export const Content = styled.div`
-    grid-area: content;
-    padding: 0 40px;
-    overflow-y: auto;
+    padding: 0 124px;
+
+    > div {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 0;
+
+        > h1 {
+            font-size: 32px;
+            line-height: 42px;
+            font-weight: 400;
+        }
+    }
+
 `;
 
 export const NewNote= styled(Link)`
-    grid-area: newnote;
     background-color: ${({ theme }) => theme.COLORS.ORANGE};
     color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 207px;
+    height: 48px;
+    border-radius: 8px;
+
 
     svg {
         margin-right: 8px;
