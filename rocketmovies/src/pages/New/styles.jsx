@@ -53,6 +53,10 @@ export const Form = styled.form`
     .tags {
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
         border-radius: 10px;
+        justify-content: flex-start;
+    }
+
+    .boxButton {
 
     }
 `;

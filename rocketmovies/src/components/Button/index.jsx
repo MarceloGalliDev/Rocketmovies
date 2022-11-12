@@ -1,8 +1,9 @@
 import { Container } from "./styled";
 
-export function Button({ title, loading= false, ...rest }) {
+export function Button({ title, loading = false, isDelete, ...rest }) {
     return (
-        <Container 
+        <Container
+            isDelete={isDelete}
             type= "button"
             disabled={loading}
             {...rest}

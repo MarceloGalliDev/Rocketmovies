@@ -9,8 +9,8 @@ export const Container = styled.button`
     border-radius: 10px;
     font-weight: 500;
 
-    background-color: ${({ theme }) => theme.COLORS.ORANGE};
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+    background-color: ${({ theme, isDelete }) => isDelete ? theme.COLORS.BACKGROUND_900 : theme.COLORS.ORANGE};
+    color: ${({ theme, isDelete }) => isDelete ? theme.COLORS.ORANGE : theme.COLORS.BACKGROUND_800};
 
     &:disabled {
         opacity: 0.5;

@@ -36,10 +36,16 @@ export function New() {
                     <Section title="Marcadores">
                         <div className="tags">
                             <NoteItem value="React"/>
-                            <NoteItem isNew placeholder="Nova tag"/>
+                            <NoteItem isNew placeholder="Novo marcador"/>
                         </div>
                     </Section>
-                    <Button title="Salvar"/>
+                    <div className="boxButton">
+                        <Button 
+                            title="Excluir filme"
+                            isDelete
+                        />
+                        <Button title="Salvar alterações"/>
+                    </div>
                 </Form>
             </main>
         </Container>
