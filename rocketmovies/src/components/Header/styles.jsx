@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Container = styled.header`
+    grid-area: header;
+
     display: flex;
     justify-content: space-between;
     align-items: center;

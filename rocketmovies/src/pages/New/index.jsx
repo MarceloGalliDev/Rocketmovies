@@ -5,7 +5,7 @@ import { NoteItem } from "../../components/NoteItem";
 import { Section } from "../../components/Section";
 import { Container, Form } from "./styles";
 import { Button } from "../../components/Button";
-import { Link } from "react-router-dom";
+import { ButtonBack } from "../../components/ButtonBack"
 
 export function New() {
     return(
@@ -13,20 +13,25 @@ export function New() {
             <Header />
             <main>
                 <Form>
+                    <ButtonBack
+                        className="buttonBack" 
+                        title="Voltar"
+                        to="/"
+                    />
                     <header>
-                        <h1>Criar Nota</h1>
-                        <Link to="/">Voltar</Link>
+                        <h1>Novo Filme</h1>
                     </header>
 
-                    <Input
-                        placeholder="Título"
-                    />
-                    <Textarea placeholder="Observação"/>
+                    <div>
+                        <Input
+                            placeholder="Título"
+                        />
+                        <Input
+                            placeholder="Sua nota (de 0 a 5)"
+                        />
+                    </div>
 
-                    <Section title="Links Úteis">
-                        <NoteItem value="https://rocketseat.com.br"/>
-                        <NoteItem isNew placeholder="Novo link"/>
-                    </Section>
+                    <Textarea placeholder="Observação"/>
 
                     <Section title="Marcadores">
                         <div className="tags">

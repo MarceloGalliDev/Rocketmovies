@@ -5,23 +5,45 @@ export const Container = styled.div`
     width: 100%;
     height: 100vh;
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 150px auto;
+    grid-template-areas:
+        "header"
+        "subtitle"
+        "content"
+    ;
 `;
 
 export const Content = styled.div`
-    padding: 0 124px;
-
-    > div {
-        display: flex;
-        justify-content: space-between;
-        margin: 50px 0;
-
-        > h1 {
-            font-size: 32px;
-            line-height: 42px;
-            font-weight: 400;
-        }
+    grid-area: content;
+    margin: 0 124px;
+    padding-right: 10px;
+    overflow-y: auto;
+    
+    &::-webkit-scrollbar {
+        width: 8px;
     }
+    &::-webkit-scrollbar-thumb {
+        background-color: ${({ theme }) => theme.COLORS.ORANGE};
+        border-radius: 10px;
+        
+    }
+`;
 
+export const SubTitle = styled.div`
+    grid-area: subtitle;
+
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 124px;
+
+    > h1 {
+        font-size: 32px;
+        line-height: 42px;
+        font-weight: 400;
+    }
 `;
 
 export const NewNote= styled(Link)`
@@ -40,14 +62,3 @@ export const NewNote= styled(Link)`
     }
 `;
 
-/*
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 105px 128px auto 64px;
-    grid-template-areas:
-        "brand header"
-        "menu search"
-        "menu content"
-        "newnote content"
-    ;
-*/
